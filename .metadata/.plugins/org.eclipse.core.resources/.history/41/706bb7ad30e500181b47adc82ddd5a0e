@@ -1,0 +1,5 @@
+package com.restservice.model;
+
+public class Employee {
+
+}

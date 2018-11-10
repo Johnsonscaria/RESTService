@@ -1,0 +1,15 @@
+package com.restservice.exception;
+
+@ControllerAdvice
+public class ExceptionController {
+
+	private Log log = LogFactory.getLog(ExceptionController.class);
+	
+	@ExceptionHandler(value=Exception.class)
+	public String handleException(HttpServletRequest request , Exception e){
+		log.error("Request"+request.getRequestURL()+"Threw Exception",e);
+		return "error";
+	}
+
+}
+

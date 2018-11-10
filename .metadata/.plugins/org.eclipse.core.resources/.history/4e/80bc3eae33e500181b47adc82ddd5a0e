@@ -1,0 +1,14 @@
+package com.restservice.aop;
+
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class RESTServiceAspect {
+	@Before("execution(* StudentDAO.* (..))")
+	public void before(Joinpoint joinpoint){
+		System.out.println("Before");
+		System.out.println("Aspect -->"+joinpoint.getClass().getName());
+		System.out.println("Aspect -->"+joinpoint.getThis());
+	}
+

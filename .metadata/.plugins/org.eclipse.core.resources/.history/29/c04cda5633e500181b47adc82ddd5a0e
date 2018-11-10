@@ -1,0 +1,5 @@
+package com.restservice.aop;
+
+public class RESTServiceAspect {
+
+}

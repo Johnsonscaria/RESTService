@@ -1,0 +1,22 @@
+package com.restservice.service;
+
+import java.util.List;
+
+import com.restservice.model.Employee;
+
+/**
+ * 
+ * @author johnson
+ *
+ */
+public class EmployeeServiceImpl implements EmployeeService{
+
+	@EmployeeDAO
+	
+	@Override
+	public List<Employee> retrieveAllEmployee() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

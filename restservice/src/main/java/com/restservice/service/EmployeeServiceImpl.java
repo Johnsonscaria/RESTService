@@ -1,0 +1,29 @@
+package com.restservice.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.restservice.dao.EmployeeDAO;
+import com.restservice.model.Employee;
+
+/**
+ * 
+ * @author johnson
+ *
+ */
+@Service
+public class EmployeeServiceImpl implements EmployeeService{
+
+	@Autowired
+	EmployeeDAO employeeDAO;
+	
+	@Override
+	public List<Employee> retrieveAllEmployee() {
+
+		List<Employee> employees = employeeDAO.retrieveAllEmployee();
+		return employees;
+	}
+
+}

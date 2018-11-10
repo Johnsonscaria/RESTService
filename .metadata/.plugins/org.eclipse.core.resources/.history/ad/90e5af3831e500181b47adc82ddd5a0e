@@ -1,0 +1,21 @@
+package com.restservice.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * 
+ * @author johnson
+ *
+ */
+@RestController
+public class RESTServiceController {
+
+	@RequestMapping(path="//getAllEmployee",method=RequestMethod.POST)
+	public List<Employee> retrieveAllEmployee(){
+		System.out.println("retrieveAllStudent");
+		List<Student> studentList = studentService.getAllStudent();
+		return studentList;
+	}
+
+}

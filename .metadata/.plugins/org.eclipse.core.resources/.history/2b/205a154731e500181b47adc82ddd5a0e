@@ -1,0 +1,27 @@
+package com.restservice.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.restservice.service.EmployeeService;
+
+/**
+ * 
+ * @author johnson
+ *
+ */
+@RestController
+public class RESTServiceController {
+
+	@Autowired
+	EmployeeService employeeService;
+	
+	@RequestMapping(path="//getAllEmployee",method=RequestMethod.POST)
+	public List<Employee> retrieveAllEmployee(){
+		System.out.println("retrieveAllStudent");
+		List<Student> studentList = studentService.getAllStudent();
+		return studentList;
+	}
+
+}
